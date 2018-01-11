@@ -1,0 +1,40 @@
+//plus minus problem
+//link https://www.hackerrank.com/challenges/plus-minus/problem 
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n;
+    float pos=0;
+    float neg=0;
+    float zer=0;
+    cin>>n;
+    int a[n];
+    int i=0;
+    for(i=0;i<n;i++)
+        cin>>a[i];
+    for(i=0;i<n;i++)
+    {
+        if(a[i]>0)
+            pos++;
+        if(a[i]<0)
+            neg++;
+        if(a[i]==0)
+            zer++;
+    }
+    pos=pos/n;
+    neg=neg/n;
+    zer=zer/n;
+    cout<<pos<<"\n";
+    cout<<neg<<"\n";
+    cout<<zer;
+    return 0;
+}
+
+
