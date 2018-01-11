@@ -1,4 +1,5 @@
 //Hacker rank diagonals problem solution
+//link https://www.hackerrank.com/challenges/diagonal-difference/problem
 #include <cmath>
 #include <cstdio>
 #include <vector>
