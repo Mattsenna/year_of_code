@@ -1,0 +1,42 @@
+//Hacker rank diagonals problem solution
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n;
+    cin>>n;
+    int a[n][n];
+    int sum1=0;
+    int sum2=0;
+    int i,j;
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+            cin>>a[i][j];
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i==j)
+                sum1=sum1+a[i][j];
+        }
+    }
+    n--;
+    for(i=n;i>=0;i--)
+    {
+        for(j=n;j>=0;j--)
+        {
+            if((i+j)==(n))
+                sum2=sum2+a[i][j];
+        }
+    }
+    sum1=sum1-sum2;
+    cout<<abs(sum1);
+    return 0;
+}
